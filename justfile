@@ -11,3 +11,7 @@ docs:
 # run cabal repl
 repl *ARGS:
     cabal repl {{ ARGS }}
+
+# run exe
+run *ARGS:
+    ghcid -W -c "cabal repl exe:{{ ARGS }}" -T :main
